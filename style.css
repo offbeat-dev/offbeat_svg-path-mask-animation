@@ -25,13 +25,14 @@ body.modules-loaded svg .mask {
 }
 
 .content {
-  height: 900px;
+  height: 500px;
   overflow: hidden;
   inline-size: 100%;
   position: relative;
 }
 
 svg {
+  max-inline-size: 50%;
   inline-size: 100%;
   block-size: auto;
   position: absolute;
