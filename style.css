@@ -1,0 +1,48 @@
+:root {
+  --dash-length: 3800;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+body.modules-loaded {
+  opacity: 1;
+}
+
+body.modules-loaded svg .mask {
+  stroke-dasharray: var(--dash-length);
+  stroke-dashoffset: 0;
+  animation: dash 1s 1s linear forwards;
+}
+
+.spacer {
+  height: 50vh;
+}
+
+.content {
+  height: 900px;
+  overflow: hidden;
+  inline-size: 100%;
+  position: relative;
+}
+
+svg {
+  inline-size: 100%;
+  block-size: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  scale: 1;
+  translate: -50% -50%;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: var(--dash-length);
+  }
+}
